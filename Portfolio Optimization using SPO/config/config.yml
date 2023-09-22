@@ -1,0 +1,17 @@
+target_ticker: "AAPL"
+numerical_features: ["adx", "trix", "adxr", "cci", "macd", "macdh", "rsi_14", "kdjk", "wr_14", "atr_percent", "atr", "cmf", "MarketCap", "PbRatio", "PeRatio", "PsRatio", "return_t", "return_t_plus_1"]
+other_securities: ["ABMD", "ADBE", "ADI", "ADP"]
+to_drop: ["adx", "trix", "cci", "rsi_14", "kdjk", "atr", "PbRatio"]
+best_feats: ["cci", "macdh", "rsi_14", "kdjk", "wr_14", "cmf", "return_t", "return_t_plus_1"]
+comp_vars: ["cci", "macdh", "rsi_14", "kdjk", "wr_14", "cmf", "return_t"]
+comp_target: "return_t_plus_1"
+gamma: 0.0021467461311545067
+
+toy_grid_params:
+    learning_rate: [0.001, 0.0001]
+    batch_size: [2, 4]
+
+snp_grid_params:
+    decay_rate: [2.02, 1.02, 0.5]
+    batch_size: [128, 256, 512]
+    learning_rate: [0.001, 0.0001, 0.00001]
